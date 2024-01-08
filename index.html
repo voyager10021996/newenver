@@ -13,22 +13,28 @@
   <body>
     <div class="container">
       <nav class="navbar">
-        <div><img src="/images/logo.png" alt="enver logo" /></div>
+        <div><img src="./images/logo.png" alt="enver logo" /></div>
         <div class="test">
           <ul>
-            <li><a href=""> Home</a></li>
-            <li><a href=""> Services</a></li>
-            <li><a href=""> Our Project</a></li>
-            <li><a href=""> About us</a></li>
+            <li><a href="#hero"> Home</a></li>
+            <li><a href="#services"> Services</a></li>
+            <li><a href="#portfolio"> Our Project</a></li>
+            <li><a href="#about"> About us</a></li>
           </ul>
         </div>
+        <ul class="nav-list">
+          <li><a href="#hero"> Home</a></li>
+          <li><a href="#services"> Services</a></li>
+          <li><a href="#portfolio"> Our Project</a></li>
+          <li><a href="#about"> About us</a></li>
+        </ul>
         <div class="search">
           <input type="text" />
         </div>
         <img src="./images/Sort.svg" alt="menu" class="menu" />
       </nav>
     </div>
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="container">
         <div class="wrapper">
           <div class="wrapper__left">
@@ -72,7 +78,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section id="services" class="services">
       <div class="container">
         <h2 class="services-title">The Service We Provide For You</h2>
         <div class="services-list">
@@ -123,7 +129,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <h2 class="section-title">Our Awesome Portfolio</h2>
 
@@ -171,7 +177,7 @@
         </div>
       </div>
     </section>
-    <section class="contact-us">
+    <section id="about" class="contact-us">
       <div class="container">
         <div class="wrapper">
           <h2 class="section-title">
@@ -184,7 +190,7 @@
     <footer>
       <div class="container">
         <nav class="navbar">
-          <div><img src="/images/logo.png" alt="enver logo" /></div>
+          <div><img src="./images/logo.png" alt="enver logo" /></div>
           <ul class="nav-list">
             <li>Support</li>
             <li>Privacy Policy</li>
@@ -197,13 +203,16 @@
     <script>
       let menu = document.querySelector(".menu");
       let ul = document.querySelector(".test");
+      let li = document.querySelector(".test li");
       let count = 1;
       menu.addEventListener("click", () => {
         console.log(ul);
+        console.log("testtttt");
         if (count % 2 === 0) {
-          ul.style.display = "none";
+          ul.style.height = "0px";
         } else {
           ul.style.display = "block";
+          ul.style.height = "100px";
         }
         count++;
       });

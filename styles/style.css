@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   user-select: none;
+  scroll-behavior: smooth;
 }
 body {
   background-color: var(--main-bg-color);
@@ -20,6 +21,7 @@ body {
   justify-content: space-between;
   margin-top: 30px;
   align-items: center;
+  position: relative;
 }
 .nav-list {
   color: white;
@@ -161,7 +163,7 @@ h1 {
 }
 .item_description {
   color: var(--main-color);
-  font-size: ;
+  font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.5px;
   margin-top: 10px;
@@ -254,17 +256,17 @@ h1 {
   margin: 10px auto;
   right: 0;
   left: 0;
-  border: 2px solid white;
   border-radius: 15px;
-  background-color: var(--main-bg-color);
-  padding: 10px;
   top: 20px;
-  display: none;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
 }
 
 .test ul {
+  list-style-type: none;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   flex-direction: column;
 }
