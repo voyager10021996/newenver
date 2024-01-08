@@ -11,22 +11,31 @@
   <body>
     <div class="container">
       <nav class="navbar">
+        <div class="test">
+          <ul>
+            <li><a href="#hero"> Home</a></li>
+            <li><a href="#services"> Services</a></li>
+            <li><a href="#portfolio"> Our Project</a></li>
+            <li><a href="#about"> About us</a></li>
+          </ul>
+        </div>
         <div>
           <img src="./images/logo.png" alt="Enver logo" />
         </div>
-        <ul>
-          <li><a href=""> Home</a></li>
-          <li><a href=""> Services</a></li>
-          <li><a href=""> Our Project</a></li>
-          <li><a href=""> About us</a></li>
+        <ul class="nav-list">
+          <li><a href="#hero"> Home</a></li>
+          <li><a href="#services"> Services</a></li>
+          <li><a href="#portfolio"> Our Project</a></li>
+          <li><a href="#about"> About us</a></li>
         </ul>
         <div class="search">
           <input type="text" />
         </div>
+        <img src="./images/menu.svg" alt="menu" class="menu" />
       </nav>
     </div>
 
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="container">
         <div class="wrapper">
           <div class="wrapper__left">
@@ -73,7 +82,7 @@
       </div>
     </section>
 
-    <section class="services">
+    <section id="services" class="services">
       <div class="container">
         <h2 class="services-title">The Service We Provide For You</h2>
         <div class="services-list">
@@ -127,7 +136,7 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <h2 class="section-title">Our Awesome Portfolio</h2>
         <div class="portfolio-list">
@@ -158,7 +167,7 @@
       </div>
     </section>
 
-    <section class="contact-us">
+    <section id="about" class="contact-us">
       <div class="container">
         <div class="wrapper">
           <h2 class="section-title">
@@ -184,5 +193,21 @@
         </nav>
       </div>
     </footer>
+    <script>
+      let menu = document.querySelector(".menu");
+      let ul = document.querySelector(".test");
+      let li = document.querySelector(".test li");
+      let count = 1;
+      menu.addEventListener("click", () => {
+        console.log(ul);
+        if (count % 2 === 0) {
+          ul.style.height = "0px";
+        } else {
+          ul.style.display = "block";
+          ul.style.height = "100px";
+        }
+        count++;
+      });
+    </script>
   </body>
 </html>

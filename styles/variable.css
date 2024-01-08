@@ -19,5 +19,7 @@
 @media screen and (max-width: 840px) {
   :root {
     --services-title-size: 38px;
+    --main-size: 15px;
+    --section-title-size: 45px;
   }
 }

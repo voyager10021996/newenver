@@ -78,4 +78,26 @@
     text-align: center;
     gap: 40px;
   }
+
+  .nav-list,
+  .search {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .wrapper__left p {
+    line-height: 26px;
+  }
+
+  .hero .wrapper {
+    margin-top: 60px;
+  }
 }
