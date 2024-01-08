@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="./styles/adaptive.css" />
     <title>Enver</title>
   </head>
   <body>
     <div class="container">
       <nav class="navbar">
         <div><img src="/images/logo.png" alt="enver logo" /></div>
-        <ul>
-          <li><a href=""></a>Home</li>
-          <li>Services</li>
-          <li>Our Project</li>
-          <li>About us</li>
-        </ul>
+        <div class="test">
+          <ul>
+            <li><a href=""> Home</a></li>
+            <li><a href=""> Services</a></li>
+            <li><a href=""> Our Project</a></li>
+            <li><a href=""> About us</a></li>
+          </ul>
+        </div>
         <div class="search">
           <input type="text" />
         </div>
+        <img src="./images/Sort.svg" alt="menu" class="menu" />
       </nav>
     </div>
     <section class="hero">
@@ -124,13 +128,13 @@
         <h2 class="section-title">Our Awesome Portfolio</h2>
 
         <div class="portfolio-list">
-          <div class="port_img">
+          <div class="portfolio-list_port_img1">
             <img src="./images/portfolio1.png" alt="port1" />
           </div>
-          <div class="port_img2">
+          <div class="portfolio-list_port_img2">
             <img src="./images/portfolio2.png" alt="port2" />
           </div>
-          <div class="port_img3">
+          <div class="portfolio-list_port_img3">
             <img src="./images/portfolio3.png" alt="port3" />
           </div>
           <div class="port_img1">
@@ -157,6 +161,14 @@
           <div class="dots_item"></div>
           <div class="dots_item"></div>
         </div>
+        <div class="arrows">
+          <div class="arrow">
+            <img src="./images/left-arrow.svg" alt="left" />
+          </div>
+          <div class="arrow-active">
+            <img src="./images/right-arrow.svg" alt="right" />
+          </div>
+        </div>
       </div>
     </section>
     <section class="contact-us">
@@ -173,7 +185,7 @@
       <div class="container">
         <nav class="navbar">
           <div><img src="/images/logo.png" alt="enver logo" /></div>
-          <ul>
+          <ul class="nav-list">
             <li>Support</li>
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
@@ -182,6 +194,20 @@
         </nav>
       </div>
     </footer>
+    <script>
+      let menu = document.querySelector(".menu");
+      let ul = document.querySelector(".test");
+      let count = 1;
+      menu.addEventListener("click", () => {
+        console.log(ul);
+        if (count % 2 === 0) {
+          ul.style.display = "none";
+        } else {
+          ul.style.display = "block";
+        }
+        count++;
+      });
+    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/slick.js"></script>

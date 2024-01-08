@@ -1,17 +1,25 @@
 :root {
   --headers-family: "Open Sans", sans-serif;
-  --main-family: "Hunito Sans", sans-serif;
+  --main-family: "Nunito Sans", sans-serif;
 
   --main-bg-color: #19191b;
-  --main-color: #cbc8c8;
-  --secondary-color: #4343d5;
+  --secondary-color: #5454d4;
   --white-color: #fff;
-  --main-spacing: -0.66px;
 
-  --dot-black: var(--dot-black);
+  --main-spacing: -0.66px;
 
   --main-size: 20px;
   --section-title-size: 60px;
   --services-title-size: 28px;
   --nav-size: 18px;
+  --main-color: #cbc8c8;
+  --dot-black: black;
+}
+
+@media screen and (max-width: 840px) {
+  :root {
+    --services-title-size: 38px;
+    --section-title-size: 45px;
+    --main-size: 15px;
+  }
 }
